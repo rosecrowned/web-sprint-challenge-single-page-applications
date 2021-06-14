@@ -3,20 +3,19 @@ import { Link, useRouteMatch } from 'react-router-dom'
 import axios from 'axios'
 import Home from './Form'
 import Order from './Order'
+import PizzaForm from './Form'
 
 //initial values
 
 const initialFormValues= {
+    name: false,
     size: false,
     sauce: false,
     toppings: false,
-    subs: false,
-    quantity: false,
-    special notes: '',
 }
 
 export default function submitOrderForm() {
     return(
-        <div> Form return!</div>
+        <PizzaForm />
     )
 }

@@ -1,14 +1,12 @@
 import React from 'react'
-import 'submitOrderForm' from './Home'
+
 
 export default function PizzaForm(props) {
     const {
+        name,
         size,
         sauce,
         toppings,
-        subs,
-        quantity,
-        special_notes,
         submit
     } =props
 
@@ -26,6 +24,16 @@ export default function PizzaForm(props) {
     return(
         <form className='form container'>
             <div className="form-inputs">
+                <h2> Name</h2>
+                <label> Name 
+                    <input 
+                        value={values.name}
+                        onChange={onChange}
+                        name='name'
+                        type='text'
+                        />
+                </label>
+                
                 <h2> Size </h2>
                     <label> Size
                     <select
@@ -71,7 +79,42 @@ export default function PizzaForm(props) {
                             >
                         </select>
                     </label>
-
+                    <label> Chicken
+                        <select
+                            onChange={onChange}
+                            value={value.chicken}
+                            name='Chicken'
+                            type="checkbox"
+                            >
+                        </select>
+                    </label>
+                    <label> Onion
+                        <select
+                            onChange={onChange}
+                            value={value.onion}
+                            name='onion'
+                            type="checkbox"
+                            >
+                        </select>
+                    </label>
+                    <label> Olives
+                        <select
+                            onChange={onChange}
+                            value={value.olives}
+                            name='olives'
+                            type="checkbox"
+                            >
+                        </select>
+                    </label>
+                    <label> Pineapple
+                        <select
+                            onChange={onChange}
+                            value={value.pineapple}
+                            name='pineapple'
+                            type="checkbox"
+                            >
+                        </select>
+                    </label>
             </div>
 
             <div className="order-submit">
